@@ -62,12 +62,6 @@ function qod_scripts() {
 	wp_enqueue_script("jquery");
 	wp_enqueue_script ("qod-scripts", $script_url, array("jquery"), false, true);
 
-	//WP Ajax Version
-	// wp_localize_script("qod-scripts", "api_vars", array(
-	// 	"ajax_url" => admin_url("admin-ajax.php"),
-	// 	"status_nonce" => wp_create_nonce("qod_status_nonce"),
-	// 	"post_id" => get_the_ID()
-
 	wp_localize_script("qod-scripts", "api_vars", array(
 		"rest_url" => rest_url(),
 		"wpapi_nonce" => wp_create_nonce("wp_rest"),

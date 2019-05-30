@@ -29,7 +29,33 @@ get_header(); ?>
 
 		<?php else : ?>
 
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
+		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+			<div class="entry-content">
+				<?php the_excerpt(); ?>
+			</div><!-- .entry-content -->
+
+			<div class="entry-meta">
+				<?php the_title('<h2 class="entry-title"> &mdash; ', '</h2>'); ?>
+
+				<?php if($source && $source_url): ?>
+					<span class="source"> 
+						<a href="<?php echo $source_url; ?>">
+							<?php echo $source; ?>
+						</a>
+					</span>
+
+				<?php elseif($source): ?>
+
+					<span class="source"><?php echo $source; ?> </span>
+
+				<?php else: ?>
+
+					<span class="source"> </span>
+
+				<?php endif; ?>
+			</div>
+		</article><!-- #post-## -->
 
 		<?php endif; ?>
 

@@ -1,3 +1,50 @@
 /*--------------------------------------------------------------
 # Embedded Fonts
 --------------------------------------------------------------*/
+@font-face {
+  font-family: 'Exo';
+  src: url('../../assets/fonts/Exo-LightItalic.eot');
+  src: url('../../assets/fonts/Exo-LightItalic.eot?#iefix')
+      format('embedded-opentype'),
+    url('../../assets/fonts/Exo-LightItalic.woff2') format('woff2'),
+    url('../../assets/fonts/Exo-LightItalic.woff') format('woff'),
+    url('../../assets/fonts/Exo-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Exo';
+  src: url('../../assets/fonts/Exo-Light.eot');
+  src: url('../../assets/fonts/Exo-Light.eot?#iefix')
+      format('embedded-opentype'),
+    url('../../assets/fonts/Exo-Light.woff2') format('woff2'),
+    url('Exo-Light.woff') format('woff'),
+    url('../../assets/fonts/Exo-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Exo';
+  src: url('../../assets/fonts/Exo-Medium.eot');
+  src: url('../../assets/fonts/Exo-Medium.eot?#iefix')
+      format('embedded-opentype'),
+    url('../../assets/fonts/Exo-Medium.woff2') format('woff2'),
+    url('../../assets/fonts/Exo-Medium.woff') format('woff'),
+    url('../../assets/fonts/Exo-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Exo';
+  src: url('../../assets/fonts/Exo-MediumItalic.eot');
+  src: url('../../assets/fonts/Exo-MediumItalic.eot?#iefix')
+      format('embedded-opentype'),
+    url('../../assets/fonts/Exo-MediumItalic.woff2') format('woff2'),
+    url('../../assets/fonts/Exo-MediumItalic.woff') format('woff'),
+    url('../../assets/fonts/Exo-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}

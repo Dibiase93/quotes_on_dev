@@ -22,7 +22,17 @@ $color__link-hover: midnightblue;
 // Typography
 
 $font__main: sans-serif;
-$font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-$font__pre: "Courier 10 Pitch", Courier, monospace;
+$font__code: Monaco, Consolas, 'Andale Mono', 'DejaVu Sans Mono', monospace;
+$font__pre: 'Courier 10 Pitch', Courier, monospace;
 $font__line-height-body: 1.5;
 $font__line-height-pre: 1.6;
+
+// Website
+
+$desktop_width: 1080px;
+$tablet-width: 620px;
+
+// site colors
+
+$background-color: #222222;
+$font-color: white;

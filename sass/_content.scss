@@ -5,29 +5,89 @@
 /* Posts and pages */
 
 .sticky {
-	display: block;
+  display: block;
 }
 
 .hentry {
-	margin: 0 0 $base__space-unit;
+  margin: 0 0 $base__space-unit;
 }
 
-.updated:not(.published){
-	display: none;
+.updated:not(.published) {
+  display: none;
 }
 
 .single .byline,
 .group-blog .byline {
-	display: inline;
+  display: inline;
 }
 
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: $base__space-unit 0 0;
+  margin: $base__space-unit 0 0;
 }
 
 .page-links {
-	clear: both;
-	margin: 0 0 $base__space-unit;
+  clear: both;
+  margin: 0 0 $base__space-unit;
+}
+
+.header-image-container {
+  overflow: hidden;
+  width: 20%;
+}
+
+body {
+  background-color: #222222;
+
+  .site {
+    padding: 2.5%;
+  }
+}
+
+// body of homepage code
+.blog {
+  .site-content {
+    @include center-page;
+  }
+  .content-area {
+    text-align: center;
+  }
+  article {
+    color: $font-color;
+    &::before {
+      content: '♥';
+    }
+    &::after {
+      content: '♥';
+    }
+
+    .entry-content {
+      @include quote-font-fp;
+
+      @include tablet {
+        font-size: 1.75rem;
+      }
+      @include desktop {
+        font-size: 2.5rem;
+      }
+    }
+
+    .entry-meta {
+      display: flex;
+
+      @include desktop {
+        justify-content: center;
+      }
+
+      .entry-title {
+        @include quote-font-fp;
+        margin: 0;
+      }
+
+      .source {
+        @include quote-font-fp;
+      }
+    }
+  }
 }

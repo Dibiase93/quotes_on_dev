@@ -1,6 +1,30 @@
 // Center block
 @mixin center-block {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin center-page {
+  width: $desktop_width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin tablet {
+  @media (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}
+
+@mixin quote-font-fp {
+  font-size: 1.25rem;
+  font-family: 'Exo Web', sans-serif;
+  font-weight: 300;
 }

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 Theme Name: Quotes on Dev
 Theme URI: http://underscores.me/
@@ -217,9 +218,58 @@ td,
 th {
   padding: 0; }
 
+.site-header {
+  margin-top: 3rem; }
+  @media (min-width: 1080px) {
+    .site-header .header-container {
+      width: 1080px;
+      margin-left: auto;
+      margin-right: auto; } }
+  .site-header .header-container .header-image-container {
+    width: 100%; }
+    .site-header .header-container .header-image-container img {
+      width: 300px; }
+      @media (min-width: 620px) {
+        .site-header .header-container .header-image-container img {
+          width: 500px; } }
+      @media (min-width: 1080px) {
+        .site-header .header-container .header-image-container img {
+          width: 700px;
+          display: block;
+          margin-left: auto;
+          margin-right: auto; } }
+
 /*--------------------------------------------------------------
 # Embedded Fonts
 --------------------------------------------------------------*/
+@font-face {
+  font-family: 'Exo';
+  src: url("../../assets/fonts/Exo-LightItalic.eot");
+  src: url("../../assets/fonts/Exo-LightItalic.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Exo-LightItalic.woff2") format("woff2"), url("../../assets/fonts/Exo-LightItalic.woff") format("woff"), url("../../assets/fonts/Exo-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Exo';
+  src: url("../../assets/fonts/Exo-Light.eot");
+  src: url("../../assets/fonts/Exo-Light.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Exo-Light.woff2") format("woff2"), url("Exo-Light.woff") format("woff"), url("../../assets/fonts/Exo-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Exo';
+  src: url("../../assets/fonts/Exo-Medium.eot");
+  src: url("../../assets/fonts/Exo-Medium.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Exo-Medium.woff2") format("woff2"), url("../../assets/fonts/Exo-Medium.woff") format("woff"), url("../../assets/fonts/Exo-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Exo';
+  src: url("../../assets/fonts/Exo-MediumItalic.eot");
+  src: url("../../assets/fonts/Exo-MediumItalic.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Exo-MediumItalic.woff2") format("woff2"), url("../../assets/fonts/Exo-MediumItalic.woff") format("woff"), url("../../assets/fonts/Exo-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic; }
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -569,6 +619,58 @@ a {
 .page-links {
   clear: both;
   margin: 0 0 1.5rem; }
+
+.header-image-container {
+  overflow: hidden;
+  width: 20%; }
+
+body {
+  background-color: #222222; }
+  body .site {
+    padding: 2.5%; }
+
+.blog .site-content {
+  width: 1080px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.blog .content-area {
+  text-align: center; }
+
+.blog article {
+  color: white; }
+  .blog article::before {
+    content: '♥'; }
+  .blog article::after {
+    content: '♥'; }
+  .blog article .entry-content {
+    font-size: 1.25rem;
+    font-family: 'Exo Web', sans-serif;
+    font-weight: 300; }
+    @media (min-width: 620px) {
+      .blog article .entry-content {
+        font-size: 1.75rem; } }
+    @media (min-width: 1080px) {
+      .blog article .entry-content {
+        font-size: 2.5rem; } }
+  .blog article .entry-meta {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    @media (min-width: 1080px) {
+      .blog article .entry-meta {
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center; } }
+    .blog article .entry-meta .entry-title {
+      font-size: 1.25rem;
+      font-family: 'Exo Web', sans-serif;
+      font-weight: 300;
+      margin: 0; }
+    .blog article .entry-meta .source {
+      font-size: 1.25rem;
+      font-family: 'Exo Web', sans-serif;
+      font-weight: 300; }
 
 /*--------------------------------------------------------------
 # Media
