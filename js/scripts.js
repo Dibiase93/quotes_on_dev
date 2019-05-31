@@ -19,6 +19,7 @@
         .done(function(data) {
           const randomQuote = data[0];
           history.pushState(null, null, randomQuote.slug);
+          $('.post').append(randomQuote);
           // TODO update the DOM with the returned quote, replace entry-content
         })
         .fail(function(error) {

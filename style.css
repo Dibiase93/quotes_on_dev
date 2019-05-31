@@ -629,18 +629,18 @@ body {
     padding: 2.5%; }
 
 @media (min-width: 1080px) {
-  .blog .site-content {
+  .home .site-content {
     width: 1080px;
     margin-left: auto;
     margin-right: auto;
     position: relative; } }
 
-.content-area {
+.home .content-area {
   max-width: 100%; }
   @media (min-width: 1080px) {
-    .content-area {
+    .home .content-area {
       margin: 4.5rem 175px 1.5rem; }
-      .content-area::before {
+      .home .content-area::before {
         content: '\f10d';
         font-family: 'fontawesome';
         position: absolute;
@@ -649,7 +649,7 @@ body {
         line-height: 125px;
         color: #00cc00;
         left: 0; }
-      .content-area::after {
+      .home .content-area::after {
         content: '\f10e';
         font-family: 'fontawesome';
         position: absolute;
@@ -658,38 +658,35 @@ body {
         line-height: 125px;
         color: #00cc00;
         right: 0; } }
-  .content-area .site-main {
+  .home .content-area .site-main {
     max-width: 100%; }
-    .content-area .site-main article {
+    .home .content-area .site-main article {
       color: white; }
-      .content-area .site-main article .entry-content {
+      .home .content-area .site-main article .entry-content {
         font-size: 1.25rem;
         font-family: 'Exo Web', sans-serif;
         font-weight: 300; }
         @media (min-width: 620px) {
-          .content-area .site-main article .entry-content {
+          .home .content-area .site-main article .entry-content {
             font-size: 1.75rem; } }
         @media (min-width: 1080px) {
-          .content-area .site-main article .entry-content {
+          .home .content-area .site-main article .entry-content {
             font-size: 2.5rem; } }
-      .content-area .site-main article .entry-meta {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
+      .home .content-area .site-main article .entry-meta {
         font-size: 1.25rem;
         font-family: 'Exo Web', sans-serif;
         font-weight: 300; }
         @media (min-width: 1080px) {
-          .content-area .site-main article .entry-meta {
+          .home .content-area .site-main article .entry-meta {
             -webkit-box-pack: center;
                 -ms-flex-pack: center;
                     justify-content: center; } }
-        .content-area .site-main article .entry-meta .entry-title {
+        .home .content-area .site-main article .entry-meta .entry-title {
           font-size: 1.25rem;
           font-family: 'Exo Web', sans-serif;
           font-weight: 300;
-          margin: 0;
-          width: auto; }
+          display: inline-block;
+          margin: 0; }
 
 /*--------------------------------------------------------------
 # Media

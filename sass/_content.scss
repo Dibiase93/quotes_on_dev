@@ -46,65 +46,65 @@ body {
 }
 
 // body of homepage code
-.blog {
+.home {
   .site-content {
     @include desktop {
       @include center-page;
       position: relative;
     }
   }
-}
-.content-area {
-  //   text-align: center;
-  max-width: 100%;
 
-  @include desktop {
-    margin: 4.5rem 175px 1.5rem;
-
-    &::before {
-      content: '\f10d';
-      @include quote-style;
-      left: 0;
-    }
-    &::after {
-      content: '\f10e';
-      @include quote-style;
-      right: 0;
-    }
-  }
-  .site-main {
+  .content-area {
+    //   text-align: center;
     max-width: 100%;
-    article {
-      color: $font-color;
 
-      .entry-content {
-        @include quote-font-fp;
+    @include desktop {
+      margin: 4.5rem 175px 1.5rem;
 
-        @include tablet {
-          font-size: 1.75rem;
-        }
-        @include desktop {
-          font-size: 2.5rem;
-        }
+      &::before {
+        content: '\f10d';
+        @include quote-style;
+        left: 0;
       }
+      &::after {
+        content: '\f10e';
+        @include quote-style;
+        right: 0;
+      }
+    }
+    .site-main {
+      max-width: 100%;
+      article {
+        color: $font-color;
 
-      .entry-meta {
-        display: flex;
-        @include quote-font-fp;
-
-        @include desktop {
-          justify-content: center;
-        }
-
-        .entry-title {
+        .entry-content {
           @include quote-font-fp;
-          margin: 0;
-          width: auto;
+
+          @include tablet {
+            font-size: 1.75rem;
+          }
+          @include desktop {
+            font-size: 2.5rem;
+          }
         }
 
-        // .source {
-        //   @include quote-font-fp;
-        // }
+        .entry-meta {
+          @include quote-font-fp;
+
+          @include desktop {
+            justify-content: center;
+          }
+
+          .entry-title {
+            @include quote-font-fp;
+            display: inline-block;
+            margin: 0;
+          }
+
+          //   .source {
+          //     // margin-left: 5px;
+          //   }
+        }
       }
     }
   }
