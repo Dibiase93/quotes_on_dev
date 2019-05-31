@@ -28,3 +28,12 @@
   font-family: 'Exo Web', sans-serif;
   font-weight: 300;
 }
+
+@mixin quote-style {
+  font-family: 'fontawesome';
+  position: absolute;
+  top: 0;
+  font-size: 125px;
+  line-height: 125px;
+  color: $highlight;
+}

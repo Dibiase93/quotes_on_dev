@@ -6,7 +6,7 @@
   "rules": {
     "no-alert": 0,
     "no-bitwise": 0,
-    "camelcase": 1,
+    "camelcase": 0,
     "curly": 1,
     "eqeqeq": 1,
     "no-console": 1,
@@ -18,7 +18,8 @@
   "globals": {
     "jQuery": false,
     "$": false,
-    "_": false
+    "_": false,
+    "api_vars": false
   },
   "env": {
     "es6": true,

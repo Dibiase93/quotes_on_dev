@@ -48,45 +48,63 @@ body {
 // body of homepage code
 .blog {
   .site-content {
-    @include center-page;
+    @include desktop {
+      @include center-page;
+      position: relative;
+    }
   }
-  .content-area {
-    text-align: center;
-  }
-  article {
-    color: $font-color;
+}
+.content-area {
+  //   text-align: center;
+  max-width: 100%;
+
+  @include desktop {
+    margin: 4.5rem 175px 1.5rem;
+
     &::before {
-      content: '♥';
+      content: '\f10d';
+      @include quote-style;
+      left: 0;
     }
     &::after {
-      content: '♥';
+      content: '\f10e';
+      @include quote-style;
+      right: 0;
     }
+  }
+  .site-main {
+    max-width: 100%;
+    article {
+      color: $font-color;
 
-    .entry-content {
-      @include quote-font-fp;
-
-      @include tablet {
-        font-size: 1.75rem;
-      }
-      @include desktop {
-        font-size: 2.5rem;
-      }
-    }
-
-    .entry-meta {
-      display: flex;
-
-      @include desktop {
-        justify-content: center;
-      }
-
-      .entry-title {
+      .entry-content {
         @include quote-font-fp;
-        margin: 0;
+
+        @include tablet {
+          font-size: 1.75rem;
+        }
+        @include desktop {
+          font-size: 2.5rem;
+        }
       }
 
-      .source {
+      .entry-meta {
+        display: flex;
         @include quote-font-fp;
+
+        @include desktop {
+          justify-content: center;
+        }
+
+        .entry-title {
+          @include quote-font-fp;
+          margin: 0;
+          width: auto;
+        }
+
+        // .source {
+        //   @include quote-font-fp;
+        // }
       }
     }
   }
