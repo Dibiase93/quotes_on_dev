@@ -26,9 +26,10 @@
 						<h1 class="site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 					</div><!-- .site-branding -->
 
-		
 					<div class="header-image-container">
-						<img src="<?php echo get_template_directory_uri();?>/assets/qod-logo.svg" alt="">
+						<a href="http://localhost:8888/quotes_on_dev/">
+							<img src="<?php echo get_template_directory_uri();?>/assets/qod-logo.svg" alt="">
+						</a>
 					</div>
 				</div>
 			</header><!-- #masthead -->

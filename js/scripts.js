@@ -9,7 +9,7 @@
       event.preventDefault();
 
       lastPage = document.URL;
-
+      $('.post').html('');
       $.ajax({
         method: 'get',
         url:
@@ -19,8 +19,20 @@
         .done(function(data) {
           const randomQuote = data[0];
           history.pushState(null, null, randomQuote.slug);
-          $('.post').append(randomQuote);
-          // TODO update the DOM with the returned quote, replace entry-content
+
+          console.log(randomQuote);
+          const quoteParagraph = randomQuote.excerpt.rendered;
+          const author = randomQuote.title.rendered;
+          const source = randomQuote._qod_quote_source;
+          const sourceUrl = randomQuote._qod_quote_source_url;
+          $('.post').append(
+            '<div class="entry-content">' + quoteParagraph + '</div>'
+             '<div class="entry-meta">,<h2 class="entry-title">' + author + '</h2>'
+            '<span class="source">' + if (sourceUrl !== '')
+            {+ '<a href="'+sourceUrl+'">' + source + '</a>'
+          +}else{+
+            '<p>'+ source +'</p>' 
+          +}+'</span></div>');
         })
         .fail(function(error) {
           console.log(error);
@@ -28,7 +40,7 @@
         });
 
       $(window).on('popstate', function() {
-        window.location.replace(lastPage);
+        window.location.append(lastPage);
       });
     } //end of getRandomQuote
 
