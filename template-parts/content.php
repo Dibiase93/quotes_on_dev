@@ -40,7 +40,7 @@
 
 
 <?php if( is_home() || is_single() ): ?>
-	
-	<button type="button" id="new-quote-button"> Show Me Another! </button>
-
+	<div class="button-container">
+		<button type="button" id="new-quote-button"> Show Me Another! </button>
+	</div>
 <?php endif; ?>

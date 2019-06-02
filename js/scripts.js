@@ -9,7 +9,6 @@
       event.preventDefault();
 
       lastPage = document.URL;
-      $('.post').html('');
       $.ajax({
         method: 'get',
         url:
@@ -19,24 +18,42 @@
         .done(function(data) {
           const randomQuote = data[0];
           history.pushState(null, null, randomQuote.slug);
-
-          console.log(randomQuote);
           const quoteParagraph = randomQuote.excerpt.rendered;
           const author = randomQuote.title.rendered;
           const source = randomQuote._qod_quote_source;
           const sourceUrl = randomQuote._qod_quote_source_url;
-          $('.post').append(
-            '<div class="entry-content">' + quoteParagraph + '</div>'
-             '<div class="entry-meta">,<h2 class="entry-title">' + author + '</h2>'
-            '<span class="source">' + if (sourceUrl !== '')
-            {+ '<a href="'+sourceUrl+'">' + source + '</a>'
-          +}else{+
-            '<p>'+ source +'</p>' 
-          +}+'</span></div>');
+
+          const contentAndTitle = `<div class="entry-content">
+          ${quoteParagraph}
+          </div>
+          <div class="entry-meta">
+          <h2 class="entry-title">&mdash; ${author}
+          </h2>`;
+
+          if (source && sourceUrl) {
+            $('.post').html(
+              contentAndTitle +
+                `<span class="source">, <a href="${sourceUrl}"> ${source}</a>
+              </span></div>`
+            );
+          } else if (source) {
+            $('.post').html(
+              contentAndTitle +
+                `<span class="source">, ${source}
+                </span></div>`
+            );
+          } else {
+            $('.post').html(
+              contentAndTitle +
+                `<span class="source">
+                </span></div>` //end of .entry-meta class
+            );
+          }
         })
-        .fail(function(error) {
-          console.log(error);
-          // TODO append a message telling the user something went wrong
+        .fail(function() {
+          $('.post').html(
+            `<p class=".entry-meta"> Failed to load quote, please try again</p>`
+          );
         });
 
       $(window).on('popstate', function() {

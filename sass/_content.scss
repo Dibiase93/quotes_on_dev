@@ -38,7 +38,7 @@
 }
 
 body {
-  background-color: #222222;
+  background-color: $background-color;
 
   .site {
     padding: 2.5%;
@@ -101,11 +101,45 @@ body {
             margin: 0;
           }
 
-          //   .source {
-          //     // margin-left: 5px;
-          //   }
+          .source {
+            a {
+              color: $highlight;
+              text-decoration: none;
+              font-style: italic;
+
+              &:hover {
+                cursor: pointer;
+              }
+            }
+          }
         }
       }
+    }
+  } //end of frontpage post style
+  .button-container {
+    @include desktop {
+      text-align: center;
+    }
+    button {
+      border: 2px solid $highlight;
+      border-radius: 3px;
+      font-weight: 700;
+      padding: 0.75rem 2.25rem;
+      color: $highlight;
+      font-family: $main-font;
+      background-color: $background-color;
+      box-shadow: none;
+      text-shadow: none;
+      font-size: 1rem;
+    } //end of button customization
+  }
+  .nav-links {
+    display: none;
+  }
+
+  .menu-toggle {
+    button {
+      display: none;
     }
   }
 }

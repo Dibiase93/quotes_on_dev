@@ -25,7 +25,7 @@
 
 @mixin quote-font-fp {
   font-size: 1.25rem;
-  font-family: 'Exo Web', sans-serif;
+  font-family: $main-font;
   font-weight: 300;
 }
 

@@ -664,7 +664,7 @@ body {
       color: white; }
       .home .content-area .site-main article .entry-content {
         font-size: 1.25rem;
-        font-family: 'Exo Web', sans-serif;
+        font-family: "Exo", sans-serif;
         font-weight: 300; }
         @media (min-width: 620px) {
           .home .content-area .site-main article .entry-content {
@@ -674,7 +674,7 @@ body {
             font-size: 2.5rem; } }
       .home .content-area .site-main article .entry-meta {
         font-size: 1.25rem;
-        font-family: 'Exo Web', sans-serif;
+        font-family: "Exo", sans-serif;
         font-weight: 300; }
         @media (min-width: 1080px) {
           .home .content-area .site-main article .entry-meta {
@@ -683,10 +683,39 @@ body {
                     justify-content: center; } }
         .home .content-area .site-main article .entry-meta .entry-title {
           font-size: 1.25rem;
-          font-family: 'Exo Web', sans-serif;
+          font-family: "Exo", sans-serif;
           font-weight: 300;
           display: inline-block;
           margin: 0; }
+        .home .content-area .site-main article .entry-meta .source a {
+          color: #00cc00;
+          text-decoration: none;
+          font-style: italic; }
+          .home .content-area .site-main article .entry-meta .source a:hover {
+            cursor: pointer; }
+
+@media (min-width: 1080px) {
+  .home .button-container {
+    text-align: center; } }
+
+.home .button-container button {
+  border: 2px solid #00cc00;
+  border-radius: 3px;
+  font-weight: 700;
+  padding: 0.75rem 2.25rem;
+  color: #00cc00;
+  font-family: "Exo", sans-serif;
+  background-color: #222222;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  text-shadow: none;
+  font-size: 1rem; }
+
+.home .nav-links {
+  display: none; }
+
+.home .menu-toggle button {
+  display: none; }
 
 /*--------------------------------------------------------------
 # Media
