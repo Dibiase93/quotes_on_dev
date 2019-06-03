@@ -8,12 +8,8 @@ It was very challenging at first, working with the data from the Ajax request. T
 
 ### Challenges
 
-I had the most issues with the jQuery part of the project. However, I thought I had a good understanding of CSS, but this project had some challenging CSS.
+I had the most issues with the jQuery part of the project. However, I thought I had a good understanding of CSS, but this project had some challenging CSS. Also, I underestimated how long it would take to style the 404 and search page, so didn't have time to fully finish them.
 
 #### Getting started
 
 Download files, and open through WordPress.
-
-##### Confusion
-
-Couldn't find the search bar, so didn't style. Also, had issues getting to the 404 page.

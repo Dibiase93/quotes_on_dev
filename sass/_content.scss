@@ -49,6 +49,8 @@ body {
 }
 
 // body of homepage code
+.search,
+.error-404,
 .single,
 .page,
 .home {
@@ -60,7 +62,6 @@ body {
       position: relative;
     }
   }
-
   .content-area {
     @include desktop {
       margin: 4.5rem 175px 1.5rem;
@@ -176,6 +177,49 @@ body {
       a {
         text-decoration: none;
         color: $highlight;
+      }
+    }
+  }
+}
+
+// 404 styling
+.error-404 {
+  h1 {
+    color: white;
+    font-family: $main-font;
+  }
+  .page-content {
+    p {
+      color: white;
+      font-family: $main-font;
+      font-weight: 300;
+    }
+
+    form {
+      fieldset {
+        border: none;
+
+        label {
+          input {
+            background-color: $background-color;
+            font-family: $main-font;
+            width: 240px;
+            font-size: 1.25rem;
+            border: 2px solid $highlight;
+          }
+        }
+
+        button {
+          background-color: $background-color;
+          font-family: $main-font;
+          width: 120px;
+          font-size: 1.25rem;
+          border: 2px solid $highlight;
+          color: $highlight;
+          text-shadow: none;
+          box-shadow: none;
+          padding: 6px 12px;
+        }
       }
     }
   }

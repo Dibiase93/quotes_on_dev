@@ -700,6 +700,8 @@ body {
         margin-right: auto; } }
 
 @media (min-width: 1080px) {
+  .search,
+  .error-404,
   .single,
   .page,
   .home {
@@ -708,16 +710,22 @@ body {
     margin-right: auto; } }
 
 @media (min-width: 1080px) {
+  .search .site-content,
+  .error-404 .site-content,
   .single .site-content,
   .page .site-content,
   .home .site-content {
     position: relative; } }
 
 @media (min-width: 1080px) {
+  .search .content-area,
+  .error-404 .content-area,
   .single .content-area,
   .page .content-area,
   .home .content-area {
     margin: 4.5rem 175px 1.5rem; }
+    .search .content-area::before,
+    .error-404 .content-area::before,
     .single .content-area::before,
     .page .content-area::before,
     .home .content-area::before {
@@ -729,6 +737,8 @@ body {
       line-height: 125px;
       color: #00cc00;
       left: 0; }
+    .search .content-area::after,
+    .error-404 .content-area::after,
     .single .content-area::after,
     .page .content-area::after,
     .home .content-area::after {
@@ -741,10 +751,14 @@ body {
       color: #00cc00;
       right: 0; } }
 
+.search .content-area .site-main article,
+.error-404 .content-area .site-main article,
 .single .content-area .site-main article,
 .page .content-area .site-main article,
 .home .content-area .site-main article {
   color: white; }
+  .search .content-area .site-main article .entry-content,
+  .error-404 .content-area .site-main article .entry-content,
   .single .content-area .site-main article .entry-content,
   .page .content-area .site-main article .entry-content,
   .home .content-area .site-main article .entry-content {
@@ -752,15 +766,21 @@ body {
     font-family: "Exo", sans-serif;
     font-weight: 300; }
     @media (min-width: 620px) {
+      .search .content-area .site-main article .entry-content,
+      .error-404 .content-area .site-main article .entry-content,
       .single .content-area .site-main article .entry-content,
       .page .content-area .site-main article .entry-content,
       .home .content-area .site-main article .entry-content {
         font-size: 1.75rem; } }
     @media (min-width: 1080px) {
+      .search .content-area .site-main article .entry-content,
+      .error-404 .content-area .site-main article .entry-content,
       .single .content-area .site-main article .entry-content,
       .page .content-area .site-main article .entry-content,
       .home .content-area .site-main article .entry-content {
         font-size: 2.5rem; } }
+  .search .content-area .site-main article .entry-meta,
+  .error-404 .content-area .site-main article .entry-meta,
   .single .content-area .site-main article .entry-meta,
   .page .content-area .site-main article .entry-meta,
   .home .content-area .site-main article .entry-meta {
@@ -769,12 +789,16 @@ body {
     font-weight: 300;
     margin-bottom: 3rem; }
     @media (min-width: 1080px) {
+      .search .content-area .site-main article .entry-meta,
+      .error-404 .content-area .site-main article .entry-meta,
       .single .content-area .site-main article .entry-meta,
       .page .content-area .site-main article .entry-meta,
       .home .content-area .site-main article .entry-meta {
         -webkit-box-pack: center;
             -ms-flex-pack: center;
                 justify-content: center; } }
+    .search .content-area .site-main article .entry-meta .entry-title,
+    .error-404 .content-area .site-main article .entry-meta .entry-title,
     .single .content-area .site-main article .entry-meta .entry-title,
     .page .content-area .site-main article .entry-meta .entry-title,
     .home .content-area .site-main article .entry-meta .entry-title {
@@ -783,23 +807,31 @@ body {
       font-weight: 300;
       display: inline-block;
       margin: 0; }
+    .search .content-area .site-main article .entry-meta .source a,
+    .error-404 .content-area .site-main article .entry-meta .source a,
     .single .content-area .site-main article .entry-meta .source a,
     .page .content-area .site-main article .entry-meta .source a,
     .home .content-area .site-main article .entry-meta .source a {
       color: #00cc00;
       text-decoration: none;
       font-style: italic; }
+      .search .content-area .site-main article .entry-meta .source a:hover,
+      .error-404 .content-area .site-main article .entry-meta .source a:hover,
       .single .content-area .site-main article .entry-meta .source a:hover,
       .page .content-area .site-main article .entry-meta .source a:hover,
       .home .content-area .site-main article .entry-meta .source a:hover {
         cursor: pointer; }
 
 @media (min-width: 1080px) {
+  .search .button-container,
+  .error-404 .button-container,
   .single .button-container,
   .page .button-container,
   .home .button-container {
     text-align: center; } }
 
+.search .button-container button,
+.error-404 .button-container button,
 .single .button-container button,
 .page .button-container button,
 .home .button-container button {
@@ -815,21 +847,29 @@ body {
   text-shadow: none;
   font-size: 1rem;
   outline: none; }
+  .search .button-container button:hover,
+  .error-404 .button-container button:hover,
   .single .button-container button:hover,
   .page .button-container button:hover,
   .home .button-container button:hover {
     opacity: 0.8; }
 
+.search .nav-links,
+.error-404 .nav-links,
 .single .nav-links,
 .page .nav-links,
 .home .nav-links {
   display: none; }
 
+.search .menu-toggle button,
+.error-404 .menu-toggle button,
 .single .menu-toggle button,
 .page .menu-toggle button,
 .home .menu-toggle button {
   display: none; }
 
+.search .type-page .entry-content p,
+.error-404 .type-page .entry-content p,
 .single .type-page .entry-content p,
 .page .type-page .entry-content p,
 .home .type-page .entry-content p {
@@ -847,6 +887,35 @@ body {
   .page .entry-content p a {
     text-decoration: none;
     color: #00cc00; }
+
+.error-404 h1 {
+  color: white;
+  font-family: "Exo", sans-serif; }
+
+.error-404 .page-content p {
+  color: white;
+  font-family: "Exo", sans-serif;
+  font-weight: 300; }
+
+.error-404 .page-content form fieldset {
+  border: none; }
+  .error-404 .page-content form fieldset label input {
+    background-color: #222222;
+    font-family: "Exo", sans-serif;
+    width: 240px;
+    font-size: 1.25rem;
+    border: 2px solid #00cc00; }
+  .error-404 .page-content form fieldset button {
+    background-color: #222222;
+    font-family: "Exo", sans-serif;
+    width: 120px;
+    font-size: 1.25rem;
+    border: 2px solid #00cc00;
+    color: #00cc00;
+    text-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    padding: 6px 12px; }
 
 /*--------------------------------------------------------------
 # Media
@@ -870,16 +939,21 @@ object {
 --------------------------------------------------------------*/
 /* All Archives Page */
 /* Submit a Quote Page */
+.search header h1,
 .archives header h1 {
   color: white;
   margin-top: 3rem; }
 
+.search h2,
 .archives h2 {
   color: white;
   font-family: "Exo", sans-serif;
   padding-top: 18px;
   font-weight: 300px; }
 
+.search .tag-archives ul,
+.search .category-archives ul,
+.search .post-archives ul,
 .archives .tag-archives ul,
 .archives .category-archives ul,
 .archives .post-archives ul {
@@ -892,11 +966,17 @@ object {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   max-width: 100%; }
+  .search .tag-archives ul li,
+  .search .category-archives ul li,
+  .search .post-archives ul li,
   .archives .tag-archives ul li,
   .archives .category-archives ul li,
   .archives .post-archives ul li {
     margin-bottom: 0.5rem;
     margin-right: 1.125rem; }
+  .search .tag-archives ul a,
+  .search .category-archives ul a,
+  .search .post-archives ul a,
   .archives .tag-archives ul a,
   .archives .category-archives ul a,
   .archives .post-archives ul a {
@@ -904,11 +984,17 @@ object {
     color: #00cc00;
     font-family: "Exo", sans-serif;
     font-weight: 300; }
+    .search .tag-archives ul a:hover,
+    .search .category-archives ul a:hover,
+    .search .post-archives ul a:hover,
     .archives .tag-archives ul a:hover,
     .archives .category-archives ul a:hover,
     .archives .post-archives ul a:hover {
       opacity: 0.8; }
     @media (min-width: 620px) {
+      .search .tag-archives ul a,
+      .search .category-archives ul a,
+      .search .post-archives ul a,
       .archives .tag-archives ul a,
       .archives .category-archives ul a,
       .archives .post-archives ul a {
