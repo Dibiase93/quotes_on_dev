@@ -55,6 +55,7 @@ get_header(); ?>
 
 				<?php endif; ?>
 			</div>
+
 		</article><!-- #post-## -->
 
 		<?php endif; ?>

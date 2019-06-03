@@ -697,79 +697,74 @@ body {
   .home .site-content {
     position: relative; } }
 
-.page .content-area,
-.home .content-area {
-  max-width: 100%; }
-  @media (min-width: 1080px) {
-    .page .content-area,
-    .home .content-area {
-      margin: 4.5rem 175px 1.5rem; }
-      .page .content-area::before,
-      .home .content-area::before {
-        content: '\f10d';
-        font-family: 'fontawesome';
-        position: absolute;
-        top: 0;
-        font-size: 125px;
-        line-height: 125px;
-        color: #00cc00;
-        left: 0; }
-      .page .content-area::after,
-      .home .content-area::after {
-        content: '\f10e';
-        font-family: 'fontawesome';
-        position: absolute;
-        top: 0;
-        font-size: 125px;
-        line-height: 125px;
-        color: #00cc00;
-        right: 0; } }
-  .page .content-area .site-main,
-  .home .content-area .site-main {
-    max-width: 100%; }
-    .page .content-area .site-main article,
-    .home .content-area .site-main article {
-      color: white; }
+@media (min-width: 1080px) {
+  .page .content-area,
+  .home .content-area {
+    margin: 4.5rem 175px 1.5rem; }
+    .page .content-area::before,
+    .home .content-area::before {
+      content: '\f10d';
+      font-family: 'fontawesome';
+      position: absolute;
+      top: 0;
+      font-size: 125px;
+      line-height: 125px;
+      color: #00cc00;
+      left: 0; }
+    .page .content-area::after,
+    .home .content-area::after {
+      content: '\f10e';
+      font-family: 'fontawesome';
+      position: absolute;
+      top: 0;
+      font-size: 125px;
+      line-height: 125px;
+      color: #00cc00;
+      right: 0; } }
+
+.page .content-area .site-main article,
+.home .content-area .site-main article {
+  color: white; }
+  .page .content-area .site-main article .entry-content,
+  .home .content-area .site-main article .entry-content {
+    font-size: 1.25rem;
+    font-family: "Exo", sans-serif;
+    font-weight: 300; }
+    @media (min-width: 620px) {
       .page .content-area .site-main article .entry-content,
       .home .content-area .site-main article .entry-content {
-        font-size: 1.25rem;
-        font-family: "Exo", sans-serif;
-        font-weight: 300; }
-        @media (min-width: 620px) {
-          .page .content-area .site-main article .entry-content,
-          .home .content-area .site-main article .entry-content {
-            font-size: 1.75rem; } }
-        @media (min-width: 1080px) {
-          .page .content-area .site-main article .entry-content,
-          .home .content-area .site-main article .entry-content {
-            font-size: 2.5rem; } }
+        font-size: 1.75rem; } }
+    @media (min-width: 1080px) {
+      .page .content-area .site-main article .entry-content,
+      .home .content-area .site-main article .entry-content {
+        font-size: 2.5rem; } }
+  .page .content-area .site-main article .entry-meta,
+  .home .content-area .site-main article .entry-meta {
+    font-size: 1.25rem;
+    font-family: "Exo", sans-serif;
+    font-weight: 300;
+    margin-bottom: 3rem; }
+    @media (min-width: 1080px) {
       .page .content-area .site-main article .entry-meta,
       .home .content-area .site-main article .entry-meta {
-        font-size: 1.25rem;
-        font-family: "Exo", sans-serif;
-        font-weight: 300;
-        margin-bottom: 3rem; }
-        @media (min-width: 1080px) {
-          .page .content-area .site-main article .entry-meta,
-          .home .content-area .site-main article .entry-meta {
-            -webkit-box-pack: center;
-                -ms-flex-pack: center;
-                    justify-content: center; } }
-        .page .content-area .site-main article .entry-meta .entry-title,
-        .home .content-area .site-main article .entry-meta .entry-title {
-          font-size: 1.25rem;
-          font-family: "Exo", sans-serif;
-          font-weight: 300;
-          display: inline-block;
-          margin: 0; }
-        .page .content-area .site-main article .entry-meta .source a,
-        .home .content-area .site-main article .entry-meta .source a {
-          color: #00cc00;
-          text-decoration: none;
-          font-style: italic; }
-          .page .content-area .site-main article .entry-meta .source a:hover,
-          .home .content-area .site-main article .entry-meta .source a:hover {
-            cursor: pointer; }
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center; } }
+    .page .content-area .site-main article .entry-meta .entry-title,
+    .home .content-area .site-main article .entry-meta .entry-title {
+      font-size: 1.25rem;
+      font-family: "Exo", sans-serif;
+      font-weight: 300;
+      display: inline-block;
+      margin: 0; }
+    .page .content-area .site-main article .entry-meta .source a,
+    .home .content-area .site-main article .entry-meta .source a {
+      color: #00cc00;
+      text-decoration: none;
+      font-style: italic; }
+      .page .content-area .site-main article .entry-meta .source a:hover,
+      .home .content-area .site-main article .entry-meta .source a:hover {
+        cursor: pointer; }
 
 @media (min-width: 1080px) {
   .page .button-container,
@@ -789,10 +784,6 @@ body {
           box-shadow: none;
   text-shadow: none;
   font-size: 1rem; }
-
-.page .nav-links,
-.home .nav-links {
-  display: none; }
 
 .page .menu-toggle button,
 .home .menu-toggle button {

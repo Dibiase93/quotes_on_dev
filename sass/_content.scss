@@ -61,8 +61,6 @@ body {
   }
 
   .content-area {
-    max-width: 100%;
-
     @include desktop {
       margin: 4.5rem 175px 1.5rem;
 
@@ -78,7 +76,6 @@ body {
       }
     }
     .site-main {
-      max-width: 100%;
       article {
         color: $font-color;
 
@@ -139,9 +136,9 @@ body {
       font-size: 1rem;
     } //end of button customization
   }
-  .nav-links {
-    display: none;
-  }
+  //   .nav-links {
+  //     display: none;
+  //   }
 
   .menu-toggle {
     button {

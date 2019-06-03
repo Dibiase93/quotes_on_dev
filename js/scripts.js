@@ -7,7 +7,6 @@
 
     function getRandomQuote(event) {
       event.preventDefault();
-
       lastPage = document.URL;
       $.ajax({
         method: 'get',
@@ -18,6 +17,7 @@
         .done(function(data) {
           const randomQuote = data[0];
           history.pushState(null, null, randomQuote.slug);
+
           const quoteParagraph = randomQuote.excerpt.rendered;
           const author = randomQuote.title.rendered;
           const source = randomQuote._qod_quote_source;
@@ -56,8 +56,8 @@
           );
         });
 
-      $(window).on('popstate', function() {
-        window.location.append(lastPage);
+      $(window).on('popstate', function(event) {
+        window.location.reload(lastPage);
       });
     } //end of getRandomQuote
 
