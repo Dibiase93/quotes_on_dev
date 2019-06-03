@@ -135,6 +135,7 @@ footer {
     justify-content: flex-start;
     flex-wrap: wrap;
     margin: 4.5rem 0 3rem;
+    text-align: left;
 
     @include desktop {
       justify-content: flex-end;

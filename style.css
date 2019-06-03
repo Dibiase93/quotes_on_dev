@@ -544,7 +544,8 @@ footer .site-info {
           justify-content: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 4.5rem 0 3rem; }
+  margin: 4.5rem 0 3rem;
+  text-align: left; }
   @media (min-width: 1080px) {
     footer .site-info {
       -webkit-box-pack: end;
@@ -677,10 +678,12 @@ footer .site-info {
 body {
   background-color: #222222; }
   body .site {
-    padding: 2.5%;
-    width: 1080px;
-    margin-left: auto;
-    margin-right: auto; }
+    padding: 2.5%; }
+    @media (min-width: 1080px) {
+      body .site {
+        width: 1080px;
+        margin-left: auto;
+        margin-right: auto; } }
 
 @media (min-width: 1080px) {
   .page,
@@ -798,6 +801,19 @@ body {
 .page .type-page .entry-content p,
 .home .type-page .entry-content p {
   font-size: 1rem; }
+
+.page {
+  width: auto; }
+  @media (min-width: 1080px) {
+    .page {
+      width: auto; } }
+  .page .entry-title {
+    font-family: "Exo", sans-serif;
+    margin-top: 3rem;
+    font-weight: 400; }
+  .page .entry-content p a {
+    text-decoration: none;
+    color: #00cc00; }
 
 /*--------------------------------------------------------------
 # Media

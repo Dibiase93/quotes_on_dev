@@ -42,7 +42,9 @@ body {
 
   .site {
     padding: 2.5%;
-    @include center-page;
+    @include desktop {
+      @include center-page;
+    }
   }
 }
 
@@ -151,6 +153,26 @@ body {
     .entry-content {
       p {
         font-size: 1rem;
+      }
+    }
+  }
+}
+.page {
+  width: auto;
+  @include desktop {
+    width: auto;
+  }
+
+  .entry-title {
+    font-family: $main-font;
+    margin-top: 3rem;
+    font-weight: 400;
+  }
+  .entry-content {
+    p {
+      a {
+        text-decoration: none;
+        color: $highlight;
       }
     }
   }
