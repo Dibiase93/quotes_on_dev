@@ -49,6 +49,7 @@ body {
 }
 
 // body of homepage code
+.single,
 .page,
 .home {
   @include desktop {
@@ -136,9 +137,9 @@ body {
       font-size: 1rem;
     } //end of button customization
   }
-  //   .nav-links {
-  //     display: none;
-  //   }
+  .nav-links .nav-previous {
+    display: none;
+  }
 
   .menu-toggle {
     button {
