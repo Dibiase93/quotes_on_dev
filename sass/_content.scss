@@ -135,6 +135,11 @@ body {
       box-shadow: none;
       text-shadow: none;
       font-size: 1rem;
+      outline: none;
+
+      &:hover {
+        opacity: 0.8;
+      }
     } //end of button customization
   }
   .nav-links {
