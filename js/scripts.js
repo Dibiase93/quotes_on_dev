@@ -84,24 +84,26 @@
           method: 'post',
           url: api_vars.rest_url + 'wp/v2/posts',
           data: {
-            title: 'quoteAuthor',
-            content: 'quoteContent', //TODO make dynamic
+            title: quoteAuthor,
+            content: quoteContent,
             post_status: 'pending',
-            _qod_quote_source: 'quoteSource',
-            _qod_source_url: 'quoteSourceUrl'
+            _qod_quote_source: quoteSource,
+            _qod_source_url: quoteSourceUrl
           },
           beforeSend: function(xhr) {
             xhr.setRequestHeader('X-WP-Nonce', api_vars.wpapi_nonce);
           }
         })
           .done(function() {
-            console.log('great success');
-            // done function
+            $('.entry-title').append(
+              `<p>&mdash; Your quote has been submitted</p>`
+            );
             $('#quote-submission-form').slideUp(500);
           })
           .fail(function() {
-            console.log('not successful');
-            // fail function
+            $('.entry-title').append(
+              `<p>&mdash; Quote not submitted, please try again</p>`
+            );
           });
       } //end of postAjax
     } // end of postQuote
