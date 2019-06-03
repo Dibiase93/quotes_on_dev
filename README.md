@@ -13,3 +13,7 @@ I had the most issues with the jQuery part of the project. However, I thought I 
 #### Getting started
 
 Download files, and open through WordPress.
+
+##### Confusion
+
+Couldn't find the search bar, so didn't style. Also, had issues getting to the 404 page.
