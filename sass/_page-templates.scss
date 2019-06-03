@@ -5,3 +5,82 @@
 /* All Archives Page */
 
 /* Submit a Quote Page */
+
+//archive page
+.archives {
+  header {
+    h1 {
+      color: white;
+      margin-top: 3rem;
+    }
+  }
+  h2 {
+    color: white;
+    font-family: $main-font;
+    padding-top: 18px;
+    font-weight: 300px;
+  }
+  .tag-archives,
+  .category-archives,
+  .post-archives {
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin-left: 0;
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 100%;
+
+      li {
+        margin-bottom: 0.5rem;
+        margin-right: 1.125rem;
+      }
+
+      a {
+        text-decoration: none;
+        color: $highlight;
+        font-family: $main-font;
+        font-weight: 300;
+
+        @include tablet {
+          font-size: 1.25rem !important;
+        }
+      }
+    }
+  }
+}
+
+// Submit a Quote
+.quote-submission {
+  h1 {
+    color: white;
+    margin-top: 3rem;
+  }
+  .quote-submission-wrapper {
+    form {
+      label {
+        color: white;
+        font-family: $main-font;
+        display: block;
+        margin: 1rem 0 1rem 0;
+      }
+
+      input {
+        background: $background-color;
+        border-color: $highlight;
+        box-shadow: none;
+        text-shadow: none;
+        color: $highlight;
+        border-radius: 3px;
+        font-size: 1rem;
+        padding: 0.75rem 2.25rem;
+        font-family: $main-font;
+        margin-bottom: 1.5rem;
+      }
+      #quote-content {
+        background-color: $background-color;
+        border-color: $highlight;
+      }
+    }
+  }
+}

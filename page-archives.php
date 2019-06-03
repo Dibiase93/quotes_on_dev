@@ -11,11 +11,15 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
              <section class="browse archives">
-                 <header class="entry-header">
-                     <?php the_title('<h1 class="entry-title"', '</h1>'); ?>
-                 </header>
+                
+
+                     <header class="entry-header">
+                        <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+                    </header><!-- .entry-header -->
+
 
                  <div class="post-archives">
+
                      <h2>Quote Authors</h2>
                      <ul>
                          <?php

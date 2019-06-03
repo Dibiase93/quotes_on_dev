@@ -283,14 +283,22 @@ textarea {
   line-height: 1.5; }
 
 /* Headings */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   clear: both; }
 
 /* Copy */
 p {
   margin-bottom: 1.5rem; }
 
-dfn, cite, em, i {
+dfn,
+cite,
+em,
+i {
   font-style: italic; }
 
 blockquote {
@@ -302,22 +310,27 @@ address {
 pre {
   background: #eee;
   font-family: "Courier 10 Pitch", Courier, monospace;
-  font-size: .9375rem;
+  font-size: 0.9375rem;
   line-height: 1.6;
   margin-bottom: 1.6rem;
   max-width: 100%;
   overflow: auto;
   padding: 1.6rem; }
 
-code, kbd, tt, var {
+code,
+kbd,
+tt,
+var {
   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-  font-size: .9375rem; }
+  font-size: 0.9375rem; }
 
-abbr, acronym {
+abbr,
+acronym {
   border-bottom: 1px dotted #666;
   cursor: help; }
 
-mark, ins {
+mark,
+ins {
   background: #fff9c0;
   text-decoration: none; }
 
@@ -851,3 +864,69 @@ object {
 --------------------------------------------------------------*/
 /* All Archives Page */
 /* Submit a Quote Page */
+.archives header h1 {
+  color: white;
+  margin-top: 3rem; }
+
+.archives h2 {
+  color: white;
+  font-family: "Exo", sans-serif;
+  padding-top: 18px;
+  font-weight: 300px; }
+
+.archives .tag-archives ul,
+.archives .category-archives ul,
+.archives .post-archives ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 100%; }
+  .archives .tag-archives ul li,
+  .archives .category-archives ul li,
+  .archives .post-archives ul li {
+    margin-bottom: 0.5rem;
+    margin-right: 1.125rem; }
+  .archives .tag-archives ul a,
+  .archives .category-archives ul a,
+  .archives .post-archives ul a {
+    text-decoration: none;
+    color: #00cc00;
+    font-family: "Exo", sans-serif;
+    font-weight: 300; }
+    @media (min-width: 620px) {
+      .archives .tag-archives ul a,
+      .archives .category-archives ul a,
+      .archives .post-archives ul a {
+        font-size: 1.25rem !important; } }
+
+.quote-submission h1 {
+  color: white;
+  margin-top: 3rem; }
+
+.quote-submission .quote-submission-wrapper form label {
+  color: white;
+  font-family: "Exo", sans-serif;
+  display: block;
+  margin: 1rem 0 1rem 0; }
+
+.quote-submission .quote-submission-wrapper form input {
+  background: #222222;
+  border-color: #00cc00;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  text-shadow: none;
+  color: #00cc00;
+  border-radius: 3px;
+  font-size: 1rem;
+  padding: 0.75rem 2.25rem;
+  font-family: "Exo", sans-serif;
+  margin-bottom: 1.5rem; }
+
+.quote-submission .quote-submission-wrapper form #quote-content {
+  background-color: #222222;
+  border-color: #00cc00; }

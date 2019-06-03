@@ -23,12 +23,12 @@ get_header(); ?>
                     <div class="quote-submission-wrapper">
                         <form name="quoteForm" id="quote-submission-form">
                             <div>
-                                <label for="quote-author"></label>
+                                <label for="quote-author">Author of Quote</label>
                                 <input type="text" name="quote_author" id="quote-author">
                             </div>    
                            
                             <div>
-                                <label for="quote-content"></label>
+                                <label for="quote-content">Quote</label>
                                 <textarea rows="3" columns="20" name="quote_content" id="quote-content"></textarea>
                             </div>  
 
