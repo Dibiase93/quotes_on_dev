@@ -473,10 +473,8 @@ a {
 .main-navigation {
   clear: both;
   display: block;
-  float: left;
-  width: 100%; }
+  float: left; }
   .main-navigation ul {
-    display: none;
     list-style: none;
     margin: 0;
     padding-left: 0; }
@@ -494,8 +492,6 @@ a {
       .main-navigation ul ul li:hover > ul,
       .main-navigation ul ul li.focus > ul {
         left: 100%; }
-      .main-navigation ul ul a {
-        width: 200px; }
     .main-navigation ul li:hover > ul,
     .main-navigation ul li.focus > ul {
       left: auto; }
@@ -535,6 +531,61 @@ a {
   float: right;
   text-align: right;
   width: 50%; }
+
+footer .menu-toggle {
+  display: none; }
+
+footer .site-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 4.5rem 0 3rem; }
+  @media (min-width: 1080px) {
+    footer .site-info {
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end; } }
+  @media (min-width: 620px) {
+    footer .site-info .main-navigation {
+      display: inline-block; } }
+  footer .site-info .menu-main-menu-container {
+    width: 100%;
+    display: block; }
+  footer .site-info .nav-menu li {
+    padding: 0 16px 0 16px;
+    border-right: 1px solid white; }
+    footer .site-info .nav-menu li:first-child {
+      padding-left: 0; }
+    footer .site-info .nav-menu li:last-child {
+      border-right: none; }
+      @media (min-width: 620px) {
+        footer .site-info .nav-menu li:last-child {
+          border-right: 1px solid white; } }
+    footer .site-info .nav-menu li a {
+      color: #00cc00;
+      font-weight: 300;
+      font-family: "Exo", sans-serif; }
+      footer .site-info .nav-menu li a:hover {
+        cursor: pointer; }
+  footer .site-info p {
+    color: white;
+    font-weight: 300;
+    font-family: "Exo", sans-serif;
+    width: 100%; }
+    @media (min-width: 620px) {
+      footer .site-info p {
+        margin: 0;
+        margin-left: 16px;
+        display: block;
+        width: auto; } }
+    footer .site-info p a {
+      color: #00cc00;
+      text-decoration: none; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -626,20 +677,31 @@ a {
 body {
   background-color: #222222; }
   body .site {
-    padding: 2.5%; }
-
-@media (min-width: 1080px) {
-  .home .site-content {
+    padding: 2.5%;
     width: 1080px;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto; }
+
+@media (min-width: 1080px) {
+  .page,
+  .home {
+    width: 1080px;
+    margin-left: auto;
+    margin-right: auto; } }
+
+@media (min-width: 1080px) {
+  .page .site-content,
+  .home .site-content {
     position: relative; } }
 
+.page .content-area,
 .home .content-area {
   max-width: 100%; }
   @media (min-width: 1080px) {
+    .page .content-area,
     .home .content-area {
       margin: 4.5rem 175px 1.5rem; }
+      .page .content-area::before,
       .home .content-area::before {
         content: '\f10d';
         font-family: 'fontawesome';
@@ -649,6 +711,7 @@ body {
         line-height: 125px;
         color: #00cc00;
         left: 0; }
+      .page .content-area::after,
       .home .content-area::after {
         content: '\f10e';
         font-family: 'fontawesome';
@@ -658,46 +721,59 @@ body {
         line-height: 125px;
         color: #00cc00;
         right: 0; } }
+  .page .content-area .site-main,
   .home .content-area .site-main {
     max-width: 100%; }
+    .page .content-area .site-main article,
     .home .content-area .site-main article {
       color: white; }
+      .page .content-area .site-main article .entry-content,
       .home .content-area .site-main article .entry-content {
         font-size: 1.25rem;
         font-family: "Exo", sans-serif;
         font-weight: 300; }
         @media (min-width: 620px) {
+          .page .content-area .site-main article .entry-content,
           .home .content-area .site-main article .entry-content {
             font-size: 1.75rem; } }
         @media (min-width: 1080px) {
+          .page .content-area .site-main article .entry-content,
           .home .content-area .site-main article .entry-content {
             font-size: 2.5rem; } }
+      .page .content-area .site-main article .entry-meta,
       .home .content-area .site-main article .entry-meta {
         font-size: 1.25rem;
         font-family: "Exo", sans-serif;
-        font-weight: 300; }
+        font-weight: 300;
+        margin-bottom: 3rem; }
         @media (min-width: 1080px) {
+          .page .content-area .site-main article .entry-meta,
           .home .content-area .site-main article .entry-meta {
             -webkit-box-pack: center;
                 -ms-flex-pack: center;
                     justify-content: center; } }
+        .page .content-area .site-main article .entry-meta .entry-title,
         .home .content-area .site-main article .entry-meta .entry-title {
           font-size: 1.25rem;
           font-family: "Exo", sans-serif;
           font-weight: 300;
           display: inline-block;
           margin: 0; }
+        .page .content-area .site-main article .entry-meta .source a,
         .home .content-area .site-main article .entry-meta .source a {
           color: #00cc00;
           text-decoration: none;
           font-style: italic; }
+          .page .content-area .site-main article .entry-meta .source a:hover,
           .home .content-area .site-main article .entry-meta .source a:hover {
             cursor: pointer; }
 
 @media (min-width: 1080px) {
+  .page .button-container,
   .home .button-container {
     text-align: center; } }
 
+.page .button-container button,
 .home .button-container button {
   border: 2px solid #00cc00;
   border-radius: 3px;
@@ -711,11 +787,17 @@ body {
   text-shadow: none;
   font-size: 1rem; }
 
+.page .nav-links,
 .home .nav-links {
   display: none; }
 
+.page .menu-toggle button,
 .home .menu-toggle button {
   display: none; }
+
+.page .type-page .entry-content p,
+.home .type-page .entry-content p {
+  font-size: 1rem; }
 
 /*--------------------------------------------------------------
 # Media

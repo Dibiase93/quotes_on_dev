@@ -42,20 +42,23 @@ body {
 
   .site {
     padding: 2.5%;
+    @include center-page;
   }
 }
 
 // body of homepage code
+.page,
 .home {
+  @include desktop {
+    @include center-page;
+  }
   .site-content {
     @include desktop {
-      @include center-page;
       position: relative;
     }
   }
 
   .content-area {
-    //   text-align: center;
     max-width: 100%;
 
     @include desktop {
@@ -90,6 +93,7 @@ body {
 
         .entry-meta {
           @include quote-font-fp;
+          margin-bottom: 3rem;
 
           @include desktop {
             justify-content: center;
@@ -140,6 +144,14 @@ body {
   .menu-toggle {
     button {
       display: none;
+    }
+  }
+  //start of about page
+  .type-page {
+    .entry-content {
+      p {
+        font-size: 1rem;
+      }
     }
   }
 }

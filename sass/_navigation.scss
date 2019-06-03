@@ -5,128 +5,196 @@
 /* Links */
 
 a {
-	color: $color__link;
+  color: $color__link;
 
-	&:visited {
-		color: $color__link-visited;
-	}
-	&:hover,
-	&:focus,
-	&:active {
-		color: $color__link-hover;
-	}
-	&:focus {
-		outline: thin dotted;
-	}
-	&:hover,
-	&:active {
-		outline: 0;
-	}
+  &:visited {
+    color: $color__link-visited;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color__link-hover;
+  }
+  &:focus {
+    outline: thin dotted;
+  }
+  &:hover,
+  &:active {
+    outline: 0;
+  }
 }
 
 /* Menus */
 
 .main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
+  clear: both;
+  display: block;
+  float: left;
 
-	ul {
-		display: none;
-		list-style: none;
-		margin: 0;
-		padding-left: 0;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
 
-		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
-			top: $base__space-unit;
-			left: -999rem;
-			z-index: 99999;
+    ul {
+      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+      float: left;
+      position: absolute;
+      top: $base__space-unit;
+      left: -999rem;
+      z-index: 99999;
 
-			ul {
-				left: -999rem;
-				top: 0;
-			}
+      ul {
+        left: -999rem;
+        top: 0;
+      }
 
-			li {
-				&:hover > ul,
-				&.focus > ul {
-					left: 100%;
-				}
-			}
+      li {
+        &:hover > ul,
+        &.focus > ul {
+          left: 100%;
+        }
+      }
 
-			a {
-				width: 200px;
-			}
+      :hover > a,
+      .focus > a {
+      }
 
-			:hover > a,
-			.focus > a {
-			}
+      a:hover,
+      a.focus {
+      }
+    }
 
-			a:hover,
-			a.focus {
-			}
-		}
+    li:hover > ul,
+    li.focus > ul {
+      left: auto;
+    }
+  }
+  li {
+    float: left;
+    position: relative;
 
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
-		}
-	}
-	li {
-		float: left;
-		position: relative;
+    &:hover > a,
+    &.focus > a {
+    }
+  }
+  a {
+    display: block;
+    text-decoration: none;
+  }
 
-		&:hover > a,
-		&.focus > a {
-		}
-	}
-	a {
-		display: block;
-		text-decoration: none;
-	}
-
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a {
-	}
+  .current_page_item > a,
+  .current-menu-item > a,
+  .current_page_ancestor > a {
+  }
 }
 
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
-	display: block;
+  display: block;
 }
 
 @media screen and (min-width: 768px) {
-	.menu-toggle {
-		display: none;
-	}
-	.main-navigation ul {
-		display: block;
-	}
+  .menu-toggle {
+    display: none;
+  }
+  .main-navigation ul {
+    display: block;
+  }
 }
 
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
+  .site-main & {
+    margin: 0 0 $base__space-unit;
+    overflow: hidden;
+  }
 
-	.site-main & {
-		margin: 0 0 $base__space-unit;
-		overflow: hidden;
-	}
+  .nav-previous {
+    float: left;
+    width: 50%;
+  }
 
-	.nav-previous {
-		float: left;
-		width: 50%;
-	}
+  .nav-next {
+    float: right;
+    text-align: right;
+    width: 50%;
+  }
+}
 
-	.nav-next {
-		float: right;
-		text-align: right;
-		width: 50%;
-	}
+//   start of custom nav menu & footer
+
+footer {
+  .menu-toggle {
+    display: none;
+  }
+  .site-info {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 4.5rem 0 3rem;
+
+    @include desktop {
+      justify-content: flex-end;
+    }
+
+    .main-navigation {
+      @include tablet {
+        display: inline-block;
+      }
+    }
+
+    .menu-main-menu-container {
+      width: 100%;
+      display: block;
+    }
+
+    .nav-menu {
+      li {
+        padding: 0 16px 0 16px;
+        border-right: 1px solid white;
+        &:first-child {
+          padding-left: 0;
+        }
+        &:last-child {
+          border-right: none;
+
+          @include tablet {
+            border-right: 1px solid white;
+          }
+        }
+
+        a {
+          color: $highlight;
+          font-weight: 300;
+          font-family: $main-font;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    p {
+      color: white;
+      font-weight: 300;
+      font-family: $main-font;
+      width: 100%;
+
+      @include tablet {
+        margin: 0;
+        margin-left: 16px;
+        display: block;
+        width: auto;
+      }
+
+      a {
+        color: $highlight;
+        text-decoration: none;
+      }
+    }
+  }
 }
