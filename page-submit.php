@@ -29,7 +29,7 @@ get_header(); ?>
                            
                             <div>
                                 <label for="quote-content"></label>
-                                <textarea rows="3" columns="20" name="quote_content" id="quote-content"> </textarea>
+                                <textarea rows="3" columns="20" name="quote_content" id="quote-content"></textarea>
                             </div>  
 
                             <div>

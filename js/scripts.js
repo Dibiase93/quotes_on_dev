@@ -65,11 +65,18 @@
       event.preventDefault();
 
       const quoteAuthor = $('#quote-author').val();
+      const quoteContent = $('#quote-content').val();
+      const quoteSource = $('#quote-source').val();
+      const quoteSourceUrl = $('#quote-source-url').val();
 
-      if (quoteAuthor !== '') {
+      if (quoteAuthor !== '' && quoteContent !== '') {
         postAjax();
+      } else if (quoteContent !== '') {
+        alert('please add author');
+      } else if (quoteAuthor !== '') {
+        alert('please add quote');
       } else {
-        console.log('no value set'); //TODO
+        alert('please add quote & author');
       }
 
       function postAjax() {
@@ -77,12 +84,11 @@
           method: 'post',
           url: api_vars.rest_url + 'wp/v2/posts',
           data: {
-            // TODO use the form input .val() for the title, content
             title: 'quoteAuthor',
-            content: 'The most amazing quote', //TODO make dynamic
-            post_status: 'pending'
-            // _qod_quote_source: TODO
-            // _qod_source_url: TODO
+            content: 'quoteContent', //TODO make dynamic
+            post_status: 'pending',
+            _qod_quote_source: 'quoteSource',
+            _qod_source_url: 'quoteSourceUrl'
           },
           beforeSend: function(xhr) {
             xhr.setRequestHeader('X-WP-Nonce', api_vars.wpapi_nonce);

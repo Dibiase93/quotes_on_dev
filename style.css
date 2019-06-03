@@ -801,9 +801,9 @@ body {
   text-shadow: none;
   font-size: 1rem; }
 
-.single .nav-links .nav-previous,
-.page .nav-links .nav-previous,
-.home .nav-links .nav-previous {
+.single .nav-links,
+.page .nav-links,
+.home .nav-links {
   display: none; }
 
 .single .menu-toggle button,
