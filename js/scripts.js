@@ -23,6 +23,8 @@
           const source = randomQuote._qod_quote_source;
           const sourceUrl = randomQuote._qod_quote_source_url;
 
+          const article = $('.post');
+
           const contentAndTitle = `<div class="entry-content">
           ${quoteParagraph}
           </div>
@@ -31,19 +33,19 @@
           </h2>`;
 
           if (source && sourceUrl) {
-            $('.post').html(
+            article.html(
               contentAndTitle +
                 `<span class="source">, <a href="${sourceUrl}"> ${source}</a>
               </span></div>`
             );
           } else if (source) {
-            $('.post').html(
+            article.html(
               contentAndTitle +
                 `<span class="source">, ${source}
                 </span></div>`
             );
           } else {
-            $('.post').html(
+            article.html(
               contentAndTitle +
                 `<span class="source">
                 </span></div>` //end of .entry-meta class
@@ -51,13 +53,13 @@
           }
         })
         .fail(function() {
-          $('.post').html(
+          article.html(
             `<p class=".entry-meta"> Failed to load quote, please try again</p>`
           );
         });
 
       $(window).on('popstate', function(event) {
-        window.location.reload(lastPage);
+        window.location = lastPage;
       });
     } //end of getRandomQuote
 
@@ -95,13 +97,12 @@
           }
         })
           .done(function() {
-            $('.entry-title').append(
-              `<p>&mdash; Your quote has been submitted</p>`
-            );
+            const formTitle = $('.entry-title');
+            formTitle.append(`<p>&mdash; Your quote has been submitted</p>`);
             $('#quote-submission-form').slideUp(500);
           })
           .fail(function() {
-            $('.entry-title').append(
+            formTitle.append(
               `<p>&mdash; Quote not submitted, please try again</p>`
             );
           });

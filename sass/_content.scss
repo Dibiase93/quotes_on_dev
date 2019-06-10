@@ -49,6 +49,9 @@ body {
 }
 
 // body of homepage code
+.paged,
+.tag-analogies,
+.category,
 .search,
 .error-404,
 .single,
@@ -220,6 +223,54 @@ body {
           box-shadow: none;
           padding: 6px 12px;
         }
+      }
+    }
+  }
+}
+
+.tag,
+.category {
+  h1 {
+    color: white;
+    font-family: $main-font;
+    font-size: 2em;
+    font-weight: 500;
+  }
+
+  .archive-list {
+    margin: 0;
+    padding: 0;
+
+    .archive-list-item {
+      border-top: 1px dotted #ffffff;
+
+      &:last-child {
+        border-bottom: 1px dotted #ffffff;
+      }
+    }
+  }
+
+  .number-pagination {
+    font-family: $main-font;
+    @include center-page;
+    margin-top: 3rem;
+    font-weight: 300;
+
+    .current {
+      color: white;
+      padding: 0 0.25rem;
+    }
+    a {
+      text-decoration: none;
+      color: $highlight;
+      padding: 0 0.25rem;
+
+      a:first-child {
+        padding-left: 0;
+      }
+
+      &:hover {
+        opacity: 0.7;
       }
     }
   }

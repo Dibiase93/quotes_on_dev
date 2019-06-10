@@ -7,8 +7,12 @@
 
 get_header(); ?>
 
+
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+
+
 
 		<?php if ( have_posts() ) : ?>
 
@@ -18,16 +22,38 @@ get_header(); ?>
 				?>
 			</header><!-- .page-header -->
 
-			<?php /* Start the Loop */ ?>
+			<?php /* Start the Loop */ ?>					
+			
+		
+
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php
-					get_template_part( 'template-parts/content' );
-				?>
 
-			<?php endwhile; ?>
+			<ul class="archive-list">
+						 <?php
+                         $posts = get_posts(array(
+							 'posts_per_page'=> 5,
+							 'post_type'=>'post',
+							 ‘post__not_in’=> $ids,
+							));
+                         foreach($posts as $post): setup_postdata($post);
+						 ?>
+                         <li class="archive-list-item">
+							 
+						 <?php
+							get_template_part( 'template-parts/content' );
+						?>
+						
+						</li>
+						
+						<?php endforeach; wp_reset_postdata(); ?>
+					 </ul>
+					
+					
+						<?php endwhile; ?>
 
-			<?php the_posts_navigation(); ?>
+			<?php qod_numbered_pagination(); ?>
+		    
 
 		<?php else : ?>
 
